@@ -1,0 +1,22 @@
+{
+    "promo_banners": [
+        {
+            "title": "Summer Sale",
+            "description": "Get up to 50% off on all summer clothing collections",
+            "imageUrl": "https://th.bing.com/th/id/OIP.swUfmDEDENWkoeTDP_mPbgHaHa?rs=1&pid=ImgDetMain",
+            "buttonText": "Shop Now"
+        },
+        {
+            "title": "New Arrivals",
+            "description": "Check out our latest fashion collection for this season",
+            "imageUrl": "https://cdn11.bigcommerce.com/s-1a7tcor/images/stencil/500x659/products/6749/33538/Screen_Shot_2021-03-15_at_16.39.41__40856.1621857234.png?c=2",
+            "buttonText": "View Collection"
+        },
+        {
+            "title": "Special Offer",
+            "description": "Buy 2 get 1 free on all accessories this weekend",
+            "imageUrl": "https://1.bp.blogspot.com/-gBFioV8fgrI/VTwQxKqyV2I/AAAAAAAAADw/MLc_oMX9Dr4/s1600/Appliances1.png",
+            "buttonText": "Get Offer"
+        }
+    ]
+}
