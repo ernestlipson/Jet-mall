@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cdc_mall/core/theme/app_theme.dart';
 import 'package:cdc_mall/features/home/presentation/bloc/home_bloc.dart';
-import 'package:cdc_mall/features/home/presentation/pages/home_page.dart';
+import 'package:cdc_mall/features/navigation/presentation/bloc/navigation_bloc.dart';
+import 'package:cdc_mall/features/cart/presentation/bloc/cart_bloc.dart';
+import 'package:cdc_mall/features/navigation/presentation/pages/main_layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,12 +20,18 @@ class MyApp extends StatelessWidget {
         BlocProvider<HomeBloc>(
           create: (context) => HomeBloc(),
         ),
+        BlocProvider<NavigationBloc>(
+          create: (context) => NavigationBloc(),
+        ),
+        BlocProvider<CartBloc>(
+          create: (context) => CartBloc(),
+        ),
       ],
       child: MaterialApp(
         title: 'CDC Mall',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
-        home: const HomePage(),
+        home: const MainLayout(),
       ),
     );
   }

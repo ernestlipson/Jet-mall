@@ -1,5 +1,24 @@
 # Changelog - CDC Mall App Development
 
+## May 9, 2025
+
+### 🧭 Navigation Improvements
+
+#### Bottom Navigation
+
+- Added bottom navigation bar with 4 main sections: Home, Cart, Orders, Settings
+- Created placeholder pages for Cart, Orders, and Settings
+- Implemented navigation state management using Flutter Bloc
+- Created `MainLayout` widget to handle page switching
+- Added icons and animations for navigation tabs
+
+#### New Feature Pages
+
+- Added `CartPage` with empty state UI and "Start Shopping" action
+- Added `OrdersPage` with empty state UI
+- Added `SettingsPage` with sections for Account, App Settings, and More
+- Reorganized app structure to support multiple feature modules
+
 ## May 8, 2025
 
 ### 🛠️ UI Improvements

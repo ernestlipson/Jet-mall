@@ -36,10 +36,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.apps, color: Colors.black),
-          onPressed: () {},
-        ),
+        title: const Text('CDC Mall',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+        centerTitle: false,
         actions: [
           IconButton(
             icon: const Icon(Icons.notifications_none_outlined,

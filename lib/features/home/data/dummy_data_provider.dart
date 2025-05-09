@@ -2,7 +2,6 @@ import 'package:cdc_mall/features/home/data/models/home_models.dart';
 
 /// Class providing dummy data for the home page UI
 class DummyDataProvider {
-  /// Get categories for "Shop by category" section
   static List<Category> getCategories() {
     return const [
       Category(

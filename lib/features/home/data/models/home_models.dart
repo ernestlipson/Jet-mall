@@ -1,4 +1,3 @@
-/// Model class representing a category in the shop
 class Category {
   final String name;
   final String imageUrl;
@@ -6,7 +5,6 @@ class Category {
   const Category({required this.name, required this.imageUrl});
 }
 
-/// Model class representing a product in the shop
 class Product {
   final String name;
   final double price;
@@ -23,7 +21,6 @@ class Product {
   });
 }
 
-/// Model class for promotional banners
 class PromoBanner {
   final String title;
   final String description;

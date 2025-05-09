@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cdc_mall/features/home/data/models/home_models.dart';
 import 'package:cdc_mall/features/home/presentation/bloc/home_bloc.dart';
+import 'package:cdc_mall/features/cart/presentation/bloc/cart_bloc.dart';
+import 'package:cdc_mall/features/navigation/presentation/bloc/navigation_bloc.dart';
 
 /// Widget for displaying a promotional banner in a carousel
 class PromoBannerWidget extends StatelessWidget {
@@ -270,6 +272,49 @@ class ProductCardWidget extends StatelessWidget {
               fontWeight: FontWeight.w400,
             ),
             overflow: TextOverflow.ellipsis,
+          ),
+          const SizedBox(height: 8),
+          SizedBox(
+            width: double.infinity,
+            height: 32,
+            child: ElevatedButton(
+              onPressed: () {
+                context.read<CartBloc>().add(AddToCart(product));
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('${product.name} added to cart'),
+                    behavior: SnackBarBehavior.floating,
+                    action: SnackBarAction(
+                      label: 'VIEW CART',
+                      onPressed: () {
+                        // Navigate to cart
+                        context.read<NavigationBloc>().add(const TabChanged(1));
+                      },
+                    ),
+                    duration: const Duration(seconds: 2),
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFF97316),
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.shopping_cart, size: 16),
+                  SizedBox(width: 4),
+                  Text(
+                    'Add to Cart',
+                    style: TextStyle(fontSize: 12),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),

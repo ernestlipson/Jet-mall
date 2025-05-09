@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:cdc_mall/features/home/data/models/home_models.dart';
 
-/// Service responsible for loading and parsing promo banner data from JSON
 class PromoBannerService {
   static Future<List<PromoBanner>> loadPromoBanners() async {
     try {
